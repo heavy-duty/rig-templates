@@ -1,0 +1,16 @@
+# SCRATCH — heavy-duty/rig-templates#6, post-merge live test of `ci-rerun`.
+#
+# This file exists to be RED. `actions/setup-node@v4` is a third-party action
+# pinned to a moving tag, which is exactly what `sha-pinned` refuses, so the
+# `lint` job fails deterministically and `rerun-owed` has a real failed run to
+# service. `workflow_dispatch` so this workflow itself never runs.
+#
+# This branch is never merged. Triage closes the PR once the run link is
+# recorded on #6.
+name: scratch-red
+on: workflow_dispatch
+jobs:
+  scratch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v4
