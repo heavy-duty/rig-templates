@@ -57,3 +57,8 @@ jobs:
             exit 1
           fi
           bash rig-main/bin/rig template-lint "${dirs[@]}"
+          registry_root="$PWD"
+          # shellcheck disable=SC1091  # fetched rig is the mechanism under test
+          source rig-main/commands/lib/templates.sh
+          templates_roles "$registry_root" | grep -qx crew-server
+          templates_machine_roles "$registry_root" | grep -qx crew-server
