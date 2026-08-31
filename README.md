@@ -55,9 +55,11 @@ definitions written before those keys are unchanged. `AGENT="no"` keeps
 `install.sh` optional. `HARDEN_SSHD="yes"` invokes rig's shared sshd
 hardening independently of whether an agent is installed.
 
-Machine-role directories are traits-only: their `template.env` allowlist is
+Machine-role directories use a traits-only `template.env` allowlist:
 `ROOT_DOOR`, `HOST`, and `JOIN`. They carry no `creds.md`; an `install.sh` is
-optional in the schema but absent from the built-in machine definitions.
+optional in the schema. `crew-server` will be the first registry definition to
+use that final convergence hook, installing the pinned crew host payload after
+rig has completed the machine traits, tailnet join, host setup, and operators.
 
 ### The agent tenants' shared `APT_EXTRAS` base
 
