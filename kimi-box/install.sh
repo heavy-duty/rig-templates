@@ -10,8 +10,14 @@
 # As of 2026-09-03 the vendor URL serves a deprecation shim. Its documented
 # KIMI_CLI_FORCE_OLD automation escape pins the legacy kimi-cli; migrating to
 # Kimi Code is a separate decision this installer does not make.
+#
+# The vendor shim installs uv into ~/.local/bin, then re-checks PATH in the
+# same shell. rig appends this definition's PATH_LINE only after this script
+# runs, so the login shell running the vendor installer is the one shell in
+# the tenant's life that does not already have ~/.local/bin on PATH.
 set -euo pipefail
 
 if [ ! -e "$TENANT_HOME/.local/bin/kimi" ]; then
-  runuser -l "$TENANT_USER" -c 'curl -LsSf https://code.kimi.com/install.sh | KIMI_CLI_FORCE_OLD=1 bash'
+  # shellcheck disable=SC2016
+  runuser -l "$TENANT_USER" -c 'curl -LsSf https://code.kimi.com/install.sh | KIMI_CLI_FORCE_OLD=1 PATH="$HOME/.local/bin:$PATH" bash'
 fi
