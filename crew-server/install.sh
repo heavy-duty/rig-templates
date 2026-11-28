@@ -37,7 +37,7 @@ umask 022
 PROG=crew-server
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CHECKSUMS="$HERE/checksums"
-CREW_VERSION=0.1.4-rc25
+CREW_VERSION=0.1.4-rc26
 CREW_URL=https://github.com/heavy-duty/crew/releases/download
 BOX_FLOOR=0.11.0
 SERVICE_GROUP=crew

@@ -30,7 +30,11 @@ crew-0.1.4-rc23.sh      0.1.4-rc23   477ca381ba3c2440f4c09bc69524bc83a2f333f7094
 # engine is rc21's). Its round's three reds were the drill's (heavy-duty/crew#905).
 crew-0.1.4-rc24.sh      0.1.4-rc24   64f8e4b0a00ee433c09be3b3525a46454193e5fa6e2eb700e5a5e3aa97140df7
 # 0.1.4-rc25: rc24 plus heavy-duty/crew#906 (the drill's fixes for rc24's reds;
-# the CLI and floor are rc24's, the engine is rc21's) — the candidate crew's
-# seven-day run is held on (heavy-duty/crew#753 G4, G6). 0.1.4 final, promoted
-# from it by stamps only, is added when it is published.
+# the CLI and floor are rc24's, the engine is rc21's). Its round read 18 of 19
+# sections green; the one red was the drill's (heavy-duty/crew#908).
 crew-0.1.4-rc25.sh      0.1.4-rc25   4c87e7db77986319aacfdd72af5311cbfc6c8217e1330515bfc7e52931be635b
+# 0.1.4-rc26: rc25 plus heavy-duty/crew#909 (one drill leg; the CLI and floor
+# are rc24's, the engine is rc21's) — the candidate crew's seven-day run is held
+# on (heavy-duty/crew#753 G4, G6). 0.1.4 final, promoted from it by stamps only,
+# is added when it is published.
+crew-0.1.4-rc26.sh      0.1.4-rc26   6c7caf845b49d247e114c2336ee745250a8901228e6e87cb4c8494246569e698

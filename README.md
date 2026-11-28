@@ -170,7 +170,7 @@ operators.
 | **Re-run** | Idempotent. crew's installer is skipped when the version is current, setup reports every unit `same`, and an operator already in the group is left alone. |
 | **Removal** | `sudo crew service teardown --purge` stops and removes the units, revokes and purges the box grant, and removes the sudoers rule, the account, the group and the data. crew's files stay; remove them with `sudo rm -rf /opt/crew /usr/local/bin/crew`. |
 
-The pin is `CREW_VERSION` in `install.sh`: `0.1.4-rc25`, the candidate of
+The pin is `CREW_VERSION` in `install.sh`: `0.1.4-rc26`, the candidate of
 crew's seven-day run (heavy-duty/crew#753). `0.1.4` final, promoted from it by
 stamps only, is a PR that records its sha256 and moves the pin.
 
